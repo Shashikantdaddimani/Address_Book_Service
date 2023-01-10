@@ -1,9 +1,9 @@
 Welcome To the AddressBook Service database program;
 
-mysql> create database Address_Book_Services;			//Created AddressBook Service Database.
+mysql> create database Address_Book_Services;		 //Created AddressBook Service Database.
 Query OK, 1 row affected (0.01 sec)
 
-mysql> show databases;						     //using show databases Queries to show the databases from mysql database.
+mysql> show databases;						 //using show databases Queries to show the databases from mysql database.
 +-----------------------+
 | Database              |
 +-----------------------+
@@ -34,7 +34,7 @@ mysql>  create table address_book_Table(FirstName VARCHAR(100)NOT NULL,LastName 
     -> ,City VARCHAR(100),State VARCHAR(100),Zip INT(10),PhoneNumber INT(20),Email VARCHAR(100));					
 Query OK, 0 rows affected, 2 warnings (0.03 sec)
 
-mysql> show tables;												//using this Queris to show the tables from addressBook_Service databases;
+mysql> show tables;									//using this Queris to show the tables from addressBook_Service databases;
 +--------------------------------+
 | Tables_in_address_book_service |
 +--------------------------------+
@@ -42,7 +42,7 @@ mysql> show tables;												//using this Queris to show the tables from addre
 +--------------------------------+
 1 row in set (0.01 sec)
 
-mysql> desc address_book_table;					    					//using this query to describing the address book table
+mysql> desc address_book_table;					    		//using this query to describing the address book table
 +-------------+--------------+------+-----+---------+-------+
 | Field       | Type         | Null | Key | Default | Extra |
 +-------------+--------------+------+-----+---------+-------+
