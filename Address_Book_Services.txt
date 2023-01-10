@@ -1,5 +1,9 @@
 Welcome To the AddressBook Service database program;
 
+/*
+ *UC1:-Creating the Address_Book_Service Databases
+ */
+
 mysql> create database Address_Book_Services;		
 Query OK, 1 row affected (0.01 sec)
 
@@ -30,6 +34,10 @@ mysql> select database();
 +-----------------------+
 1 row in set (0.00 sec)
 
+/*
+ * UC2:-creating the address book Table in the AddressBook Service database.
+ */
+
 mysql>  create table address_book_Table(FirstName VARCHAR(100)NOT NULL,LastName VARCHAR(100)NOT NULL,Address VARCHAR(200)	
     -> ,City VARCHAR(100),State VARCHAR(100),Zip INT(10),PhoneNumber INT(20),Email VARCHAR(100));					
 Query OK, 0 rows affected, 2 warnings (0.03 sec)
@@ -57,6 +65,10 @@ mysql> desc address_book_table;
 +-------------+--------------+------+-----+---------+-------+
 8 rows in set (0.01 sec)
 
+/*
+ *UC3-Inserting the values to the address_book_Table.
+ */
+
 mysql> insert into address_book_table VALUES('Amar','Patil','Saiful','Solapur','Maharashtra',413004,798792862,'amar@gmail.com');
 Query OK, 1 row affected (0.01 sec)
 
@@ -80,6 +92,10 @@ mysql> update address_book_table set PhoneNumber = 911327462 where Firstname ="S
 Query OK, 1 row affected (0.01 sec)
 Rows matched: 1  Changed: 1  Warnings: 0
 
+/*
+ *UC4:-Ability to edit existing contact person using their name
+ */
+
 mysql> select * from address_book_table;
 +------------+-----------+---------+----------+-------------+--------+-------------+------------------+
 | FirstName  | LastName  | Address | City     | State       | Zip    | PhoneNumber | Email            |
@@ -90,4 +106,22 @@ mysql> select * from address_book_table;
 +------------+-----------+---------+----------+-------------+--------+-------------+------------------+
 3 rows in set (0.00 sec)
 
+/*
+ *UC5:-Ability to delete person using person name.
+ */
+
+
+mysql> delete from address_book_table where Firstname="Divya";
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from address_book_table;
++------------+-----------+---------+----------+-------------+--------+-------------+------------------+
+| FirstName  | LastName  | Address | City     | State       | Zip    | PhoneNumber | Email            |
++------------+-----------+---------+----------+-------------+--------+-------------+------------------+
+| Amar       | Patil     | Saiful  | Solapur  | Maharashtra | 413004 |   798792862 | amar@gmail.com   |
+| Shashikant | daddimani | Hukkeri | Belagavi | karnatak    | 510358 |   911327462 | shashi@gmail.com |
++------------+-----------+---------+----------+-------------+--------+-------------+------------------+
+2 rows in set (0.00 sec)
+
 mysql>
+
