@@ -303,5 +303,56 @@ mysql> select * from address_book_table where Relation="Uncle";
 +------------+-----------+---------+----------+----------+--------+-------------+------------------+--------------+----------+
 1 row in set (0.00 sec)
 
+/*
+ *UC11:-Ability to add person to both Friend and Family.
+ */
+
+mysql> select * from address_book_table where Relation="Friend";
++-----------+----------+---------+---------+-------------+--------+-------------+----------------+--------------+----------+
+| FirstName | LastName | Address | City    | State       | Zip    | PhoneNumber | Email          | RelativeName | Relation |
++-----------+----------+---------+---------+-------------+--------+-------------+----------------+--------------+----------+
+| Amar      | Patil    | Saiful  | Solapur | Maharashtra | 413004 |   798792862 | amar@gmail.com | Anil         | Friend   |
++-----------+----------+---------+---------+-------------+--------+-------------+----------------+--------------+----------+
+1 row in set (0.00 sec)
+
+mysql> select * from address_book_table where Relation="Uncle";
++------------+-----------+---------+----------+----------+--------+-------------+------------------+--------------+----------+
+| FirstName  | LastName  | Address | City     | State    | Zip    | PhoneNumber | Email            | RelativeName | Relation |
++------------+-----------+---------+----------+----------+--------+-------------+------------------+--------------+----------+
+| Shashikant | daddimani | Hukkeri | Belagavi | karnatak | 510358 |   911327462 | shashi@gmail.com | Mahesh       | Uncle    |
++------------+-----------+---------+----------+----------+--------+-------------+------------------+--------------+----------+
+1 row in set (0.00 sec)
+
+mysql> select * from address_book_table where Relation="Aunty";
++-----------+----------+---------+----------+----------+--------+-------------+-----------------+--------------+----------+
+| FirstName | LastName | Address | City     | State    | Zip    | PhoneNumber | Email           | RelativeName | Relation |
++-----------+----------+---------+----------+----------+--------+-------------+-----------------+--------------+----------+
+| Divya     | Gasti    | Gokak   | Chikkodi | Karnatak | 411002 |    97892723 | divya@gmail.com | Arati        | Aunty    |
++-----------+----------+---------+----------+----------+--------+-------------+-----------------+--------------+----------+
+1 row in set (0.00 sec)
+
+mysql> update address_Book_table set RelativeName='Kiran' where FirstName='Shashikant';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update address_Book_table set RelativeName='Shrikant' where FirstName='Amar';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update address_Book_table set RelativeName='Veena' where FirstName='Divya';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from address_book_table;
++------------+-----------+---------+----------+-------------+--------+-------------+------------------+--------------+----------+
+| FirstName  | LastName  | Address | City     | State       | Zip    | PhoneNumber | Email            | RelativeName | Relation |
++------------+-----------+---------+----------+-------------+--------+-------------+------------------+--------------+----------+
+| Amar       | Patil     | Saiful  | Solapur  | Maharashtra | 413004 |   798792862 | amar@gmail.com   | Shrikant     | Friend   |
+| Shashikant | daddimani | Hukkeri | Belagavi | karnatak    | 510358 |   911327462 | shashi@gmail.com | Kiran        | Uncle    |
+| Divya      | Gasti     | Gokak   | Chikkodi | Karnatak    | 411002 |    97892723 | divya@gmail.com  | Veena        | Aunty    |
++------------+-----------+---------+----------+-------------+--------+-------------+------------------+--------------+----------+
+3 rows in set (0.00 sec)
+
 mysql>
+
 
