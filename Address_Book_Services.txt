@@ -123,5 +123,31 @@ mysql> select * from address_book_table;
 +------------+-----------+---------+----------+-------------+--------+-------------+------------------+
 2 rows in set (0.00 sec)
 
-mysql>
+/*
+ *UC6:-Ability to Retrieve Person belonging to a City or State from the Address Book
+ */
 
+mysql> select * from address_book_table where City="Solapur";
++-----------+----------+---------+---------+-------------+--------+-------------+----------------+
+| FirstName | LastName | Address | City    | State       | Zip    | PhoneNumber | Email          |
++-----------+----------+---------+---------+-------------+--------+-------------+----------------+
+| Amar      | Patil    | Saiful  | Solapur | Maharashtra | 413004 |   798792862 | amar@gmail.com |
++-----------+----------+---------+---------+-------------+--------+-------------+----------------+
+1 row in set (0.00 sec)
+mysql> select * from address_book_table where City="Belagavi";
++------------+-----------+---------+----------+----------+--------+-------------+------------------+
+| FirstName  | LastName  | Address | City     | State    | Zip    | PhoneNumber | Email            |
++------------+-----------+---------+----------+----------+--------+-------------+------------------+
+| Shashikant | daddimani | Hukkeri | Belagavi | karnatak | 510358 |   911327462 | shashi@gmail.com |
++------------+-----------+---------+----------+----------+--------+-------------+------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from address_book_table where City="Chikkodi";
++-----------+----------+---------+----------+----------+--------+-------------+-----------------+
+| FirstName | LastName | Address | City     | State    | Zip    | PhoneNumber | Email           |
++-----------+----------+---------+----------+----------+--------+-------------+-----------------+
+| Divya     | Gasti    | Gokak   | Chikkodi | Karnatak | 411002 |    97892723 | divya@gmail.com |
++-----------+----------+---------+----------+----------+--------+-------------+-----------------+
+1 row in set (0.00 sec)
+
+mysql>
