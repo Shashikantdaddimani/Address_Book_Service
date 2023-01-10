@@ -150,4 +150,33 @@ mysql> select * from address_book_table where City="Chikkodi";
 +-----------+----------+---------+----------+----------+--------+-------------+-----------------+
 1 row in set (0.00 sec)
 
+/*
+ *UC7:-Ability to understand the size of address book by City and State
+ *- Here size indicates the count
+ */
+
+mysql> select count(*) from address_book_table where City="Solapur";
++----------+
+| count(*) |
++----------+
+|        1 |
++----------+
+1 row in set (0.01 sec)
+
+mysql> select count(*) from address_book_table where City="Belagavi";
++----------+
+| count(*) |
++----------+
+|        1 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select count(*) from address_book_table where City="Chikkodi";
++----------+
+| count(*) |
++----------+
+|        1 |
++----------+
+1 row in set (0.00 sec)
+
 mysql>
