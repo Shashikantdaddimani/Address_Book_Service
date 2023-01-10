@@ -30,6 +30,33 @@ mysql> select database();					//using select database() Queries to select the re
 +-----------------------+
 1 row in set (0.00 sec)
 
+mysql>  create table address_book_Table(FirstName VARCHAR(100)NOT NULL,LastName VARCHAR(100)NOT NULL,Address VARCHAR(200)	//Using this Queries to create address_Book_table
+    -> ,City VARCHAR(100),State VARCHAR(100),Zip INT(10),PhoneNumber INT(20),Email VARCHAR(100));					
+Query OK, 0 rows affected, 2 warnings (0.03 sec)
+
+mysql> show tables;												//using this Queris to show the tables from addressBook_Service databases;
++--------------------------------+
+| Tables_in_address_book_service |
++--------------------------------+
+| address_book_table             |
++--------------------------------+
+1 row in set (0.01 sec)
+
+mysql> desc address_book_table;					    					//using this query to describing the address book table
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| FirstName   | varchar(100) | NO   |     | NULL    |       |
+| LastName    | varchar(100) | NO   |     | NULL    |       |
+| Address     | varchar(200) | YES  |     | NULL    |       |
+| City        | varchar(100) | YES  |     | NULL    |       |
+| State       | varchar(100) | YES  |     | NULL    |       |
+| Zip         | int          | YES  |     | NULL    |       |
+| PhoneNumber | int          | YES  |     | NULL    |       |
+| Email       | varchar(100) | YES  |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+8 rows in set (0.01 sec)
+
 mysql>
 
 
